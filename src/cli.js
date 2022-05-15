@@ -2,7 +2,7 @@
 const sierpinski = require('./index.js');
 
 const printUsage = function() {
-    console.log('\nUsage:\n' + '  $ sierpinski-square-cli <n>\n' + '  $ sierpinski-square-cli <n> <size>\n');
+    console.log('\nUsage:\n' + '  $ sierpinski-carpet-cli <n>\n' + '  $ sierpinski-carpet-cli <n> <size>\n');
 }
 
 if (process.argv.length > 2) {

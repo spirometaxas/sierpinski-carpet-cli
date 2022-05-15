@@ -1,17 +1,17 @@
 {
-  "name": "sierpinski-square-cli",
+  "name": "sierpinski-carpet-cli",
   "version": "1.0.0",
-  "description": "Print the Sierpinski Square to the console!",
+  "description": "Print the Sierpinski Carpet to the console!",
   "main": "./src/index.js",
   "bin": {
-    "sierpinski-square-cli": "./src/cli.js"
+    "sierpinski-carpet-cli": "./src/cli.js"
   },
   "files": [
     "src"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/spirometaxas/sierpinski-square-cli.git"
+    "url": "https://github.com/spirometaxas/sierpinski-carpet-cli.git"
   },
   "scripts": {
     "cli": "node ./src/cli.js"
@@ -20,9 +20,9 @@
   "license": "MIT", 
   "keywords": [ 
     "Sierpinski", 
-    "Sierpinski Square", 
+    "Sierpinski Carpet", 
     "fractals", 
-    "sierpinski-square-cli", 
+    "sierpinski-carpet-cli", 
     "cli",
     "console",
     "terminal",

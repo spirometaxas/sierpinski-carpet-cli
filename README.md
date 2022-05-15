@@ -1,27 +1,27 @@
-# sierpinski-square-cli
-Print the Sierpinski Square to the console!
+# sierpinski-carpet-cli
+Print the Sierpinski Carpet to the console!
 
 ## Usage
 ### Via `npx`:
 ```
-$ npx sierpinski-square-cli <n>
-$ npx sierpinski-square-cli <n> <size>
+$ npx sierpinski-carpet-cli <n>
+$ npx sierpinski-carpet-cli <n> <size>
 ```
 
 ### Via Global Install
 ```
-$ npm install --global sierpinski-square-cli
-$ sierpinski-square-cli <n>
-$ sierpinski-square-cli <n> <size>
+$ npm install --global sierpinski-carpet-cli
+$ sierpinski-carpet-cli <n>
+$ sierpinski-carpet-cli <n> <size>
 ```
 
 ### Via Import
 ```
-$ npm install sierpinski-square-cli
+$ npm install sierpinski-carpet-cli
 ```
 then:
 ```
-const sierpinski = require('sierpinski-square-cli');
+const sierpinski = require('sierpinski-carpet-cli');
 console.log(sierpinski.create(<n>, <size>));
 ```
 

@@ -1,0 +1,32 @@
+{
+  "name": "sierpinski-square-cli",
+  "version": "1.0.0",
+  "description": "Print the Sierpinski Square to the console!",
+  "main": "./src/index.js",
+  "bin": {
+    "sierpinski-square-cli": "./src/cli.js"
+  },
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spirometaxas/sierpinski-square-cli.git"
+  },
+  "scripts": {
+    "cli": "node ./src/cli.js"
+  },
+  "author": "Spiro Metaxas",
+  "license": "MIT", 
+  "keywords": [ 
+    "Sierpinski", 
+    "Sierpinski Square", 
+    "fractals", 
+    "sierpinski-square-cli", 
+    "cli",
+    "console",
+    "terminal",
+    "shell",
+    "unicode" 
+  ]
+}

@@ -2,7 +2,15 @@
 const sierpinski = require('./index.js');
 
 const printUsage = function() {
-    console.log('\nUsage:\n' + '  $ sierpinski-carpet-cli <n>\n' + '  $ sierpinski-carpet-cli <n> <size>\n' + '\nFlags:\n --inverse, -i: Draw the inverse Sierpinski Carpet\n --blocks,  -b: Draw using block characters\n --character=<character>: Draw using 1 specific character');
+    console.log('\n' + 
+                ' Usage:\n' + 
+                '   $ sierpinski-carpet-cli <n>\n' + 
+                '   $ sierpinski-carpet-cli <n> <size>\n' + 
+                '\n' + 
+                ' Options:\n' + 
+                '   --inverse, -i            Draw the inverse Sierpinski Carpet\n' + 
+                '   --blocks, -b             Draw using block characters\n' + 
+                '   --character=<character>  Draw using 1 specific character');
 }
 
 const getFlags = function(params) {
@@ -55,10 +63,10 @@ const getCharacter = function(flags) {
                 if (character.length === 1) {
                     return character;
                 } else {
-                    console.log('\nWarning: Please provide just 1 character.  Example: --character=*');
+                    console.log('\n Warning: Please provide just 1 character.  Example: --character=*');
                 }
             } else {
-                console.log('\nWarning: Please provide 1 character.  Example: --character=*');
+                console.log('\n Warning: Please provide 1 character.  Example: --character=*');
             }
         }
     }
@@ -76,7 +84,7 @@ if (process.argv.length > 2) {
             if (!isNaN(values[1]) && parseInt(values[1]) >= n) {
                 s = parseInt(values[1]);
             } else {
-                console.log('\n<size> should be a number greater than or equal to <n>');
+                console.log('\n <size> should be a number greater than or equal to <n>');
                 printUsage();
             }
         } else {
@@ -87,7 +95,7 @@ if (process.argv.length > 2) {
             console.log(sierpinski.create(n, { scale: s, inverse: drawInverse(flags), character: character }));
         }
     } else {
-        console.log('\n<n> should be a number greater than or equal to 0');
+        console.log('\n <n> should be a number greater than or equal to 0');
         printUsage();
     }
 } else {

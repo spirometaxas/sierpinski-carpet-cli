@@ -1,7 +1,10 @@
 #!/usr/bin/env node
 const sierpinski = require('./index.js');
 
-const printUsage = function() {
+const printUsage = function(showIntro) {
+    if (showIntro) {
+        console.log('\n Print the Sierpinski Carpet to the console!');
+    }
     console.log('\n' + 
                 ' Usage:\n' + 
                 '   $ sierpinski-carpet-cli <n>\n' + 
@@ -10,7 +13,7 @@ const printUsage = function() {
                 ' Options:\n' + 
                 '   --inverse, -i            Draw the inverse Sierpinski Carpet\n' + 
                 '   --blocks, -b             Draw using block characters\n' + 
-                '   --character=<character>  Draw using 1 specific character');
+                '   --character=<character>  Draw using 1 specific character\n');
 }
 
 const getFlags = function(params) {
@@ -85,19 +88,19 @@ if (process.argv.length > 2) {
                 s = parseInt(values[1]);
             } else {
                 console.log('\n <size> should be a number greater than or equal to <n>');
-                printUsage();
+                printUsage(false);
             }
         } else {
             s = n;
         }
         if (n !== undefined && s !== undefined) {
             const character = drawBlocks(flags) ? '█' : getCharacter(flags);
-            console.log(sierpinski.create(n, { scale: s, inverse: drawInverse(flags), character: character }));
+            console.log(sierpinski.create(n, { size: s, inverse: drawInverse(flags), character: character }));
         }
     } else {
         console.log('\n <n> should be a number greater than or equal to 0');
-        printUsage();
+        printUsage(false);
     }
 } else {
-    printUsage();
+    printUsage(true);
 }

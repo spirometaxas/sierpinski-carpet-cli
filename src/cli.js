@@ -3,13 +3,17 @@ const sierpinski = require('./index.js');
 
 const printUsage = function(showIntro) {
     if (showIntro) {
-        console.log('\n Print the Sierpinski Carpet to the console!');
+        console.log(sierpinski.create(2));
+        console.log(' Print the Sierpinski Carpet to the console!');
     }
     console.log('\n' + 
                 ' Usage:\n' + 
                 '   $ sierpinski-carpet-cli <n>\n' + 
                 '   $ sierpinski-carpet-cli <n> <size>\n' + 
                 '\n' + 
+                '   <n> is the recursive step, a number greater than or equal to 1\n' + 
+                '   <size> is the size to draw, a number greater than or equal to <n>\n' + 
+                '\n' +
                 ' Options:\n' + 
                 '   --inverse, -i            Draw the inverse Sierpinski Carpet\n' + 
                 '   --blocks, -b             Draw using block characters\n' + 
